@@ -1,0 +1,335 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+h1, h2, h3 {
+  font-family: "Lexend Mega";
+}
+.main-content h2 {
+  font-size: 2.5rem;
+}
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0px 3px 3px black;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+.nav li {
+  display: inline-block;
+  color:seashell;
+  font-family: "Lexend Mega";
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-left: .5rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+a:visited {
+  color: seashell;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+}
+.photo-and-name img {
+  max-width: 100%;
+  border-radius: 100%;
+  border: 3px solid black;
+}
+.photo-and-name h2 {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+.about p {
+  margin-top: 1rem;
+  margin-left: .2rem;
+  line-height: 1.5rem;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+.gallery-box {
+  width: 40%;
+  margin: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  margin-top: 0;
+}
+.gallery-box img {
+  max-width: 100%;   
+}
+.gallery-box figcaption {
+  margin-top: 2rem;
+}
+.skills-box {
+  width: 100%;
+  margin: 1rem;
+}
+.skills-box img {
+  max-width: 100%;
+}
+.connect-content-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem; 
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+}
+.logo-box img {
+  width: 100%;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+  .no-nav {
+      display: none;
+  }
+  .grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(16, 1fr);
+      position: absolute;
+      top: 3rem;  
+  }
+  .photo-and-name {
+      grid-column: 1 / 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 4rem;
+      margin-left: 4rem;;    
+  }
+ 
+  .main-content {
+      grid-column: 6 / 15;
+      margin-top: 4rem;
+      padding-right: 4rem;
+      
+  }
+  .about p {
+      min-width: 500px;
+  }
+  .side-bar {
+      grid-column: 15 / 16;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin: 1rem; 
+      top: 4.2rem;
+      align-items: center;
+  }
+  .footer {
+      width: 100%;
+      background-color: black;
+      position: fixed;
+      bottom: 0;
+      height: 2rem;
+      box-shadow: 0px -2px 3px black;
+  }
+  .footer a {
+      color: red;
+      text-decoration: underline;
+  }
+
+  .mobile-skills {
+      display: none;
+  }
+  }
+ 
+  @media only screen and (max-width: 1000px) {
+      .nav li a{
+          display: none;  
+      }
+
+      .no-nav {
+          display: none;
+      }
+      .nav-mobile {
+        display: none;
+        
+      }
+      .show-nav {
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        background-color: black;
+        position: fixed;
+        width: 100%;
+      }
+      .show-nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #nav {
+          display: flex;
+          justify-items: center;
+          align-items: center;   
+      }
+      
+      #nav-links {
+          display: none;
+          height: 0;
+          font-size: 1.7rem;
+      }
+
+
+      .fa-bars {
+          color: seashell;
+          z-index: 10;
+          font-size: 2rem;
+          margin-right: 1rem;
+      }
+      .fa-angle-up {
+          color: seashell;
+          z-index: 10;
+          font-size: 2rem;
+          
+      }
+     
+      .nav li {
+          display: inline-block;
+          color:seashell;
+          font-family: "Lexend Mega";
+          font-size: 1rem;
+          margin: 0 auto;
+      }
+      .grid {
+          display: flex;
+          flex-direction: column;
+          
+      }
+      .photo-and-name  {
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          width: 80%;
+          margin: 2rem auto;
+          text-align: center;
+          margin-top: 4rem;
+          max-height: auto;
+          max-width: 400px;
+      }
+      .photo-and-name h1 {
+          margin-top: 1.2rem;
+      }
+      h2 {
+          letter-spacing: -.1rem;
+          text-align: center;
+      }
+      .about {
+          width: 90%;
+          margin: .2rem auto;
+          margin-top: 1rem;
+      }
+      .side-bar {
+          display: none;
+      }
+      .mobile-skills {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 3rem;
+          margin-bottom: 3rem;
+          align-items: center;
+          
+      }
+      .mobile-skills-box {
+          width: 100%;    
+      }
+      .mobile-skills-box img {
+          width: 100%;    
+      }
+      .mobile-skills-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 80%;
+          margin: 1rem auto;
+          
+      }
+      .mobile-skills h3 {
+          font-size: 2.5rem;
+      }
+
+      .projects-header {
+          width: 90%;
+          margin: 0 auto;
+      }
+
+      .projects {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          align-items: center;
+          margin: 0 auto;
+      }
+      .gallery-box {
+          width: 100%;
+          margin: .5rem auto;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          text-align: center;
+          margin-top: 1rem;
+          
+      
+      }
+      .contact {
+        width: 90%;
+        margin: .2rem auto;
+        margin-top: 1rem;
+    }
+      .gallery-box img {
+          max-width: 100%;
+          
+      }
+      .gallery-box figcaption {
+          margin-top: 2rem;
+      }
+      .footer {
+          margin-bottom: 2rem;
+      }
+      
+  }
+ 
