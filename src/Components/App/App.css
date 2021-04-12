@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+.hide {
+  display: none;
+}
 html {
   box-sizing: border-box;
   font-size: 20px;
@@ -30,6 +33,7 @@ h1, h2, h3 {
   position: fixed;
   top: 0;
   z-index: 5;
+  color: seashell;
 }
 .nav li {
   display: inline-block;
@@ -38,18 +42,18 @@ h1, h2, h3 {
   font-size: 1.5rem;
   margin-right: 1rem;
   margin-left: .5rem;
-}
-
-a {
   text-decoration: none;
 }
-a:hover {
+
+li {
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 650ms;
+}
+li:hover {
   color: red;
 }
-a:visited {
-  color: seashell;
-}
-a:hover {
+li:hover {
   color: red;
 }
 h1 {
@@ -61,6 +65,7 @@ h1 {
   max-width: 100%;
   border-radius: 100%;
   border: 3px solid black;
+  
 }
 .photo-and-name h2 {
   margin-top: 1rem;
@@ -113,7 +118,9 @@ h1 {
 .logo-box img {
   width: 100%;
 }
-
+.hide {
+  display: none;
+}
 
 
 @media only screen and (min-width: 1000px) {
@@ -167,23 +174,22 @@ h1 {
       color: red;
       text-decoration: underline;
   }
-
   .mobile-skills {
       display: none;
   }
   }
  
   @media only screen and (max-width: 1000px) {
-      .nav li a{
+      .nav ul li {
           display: none;  
       }
 
       .no-nav {
           display: none;
+          
       }
       .nav-mobile {
         display: none;
-        
       }
       .show-nav {
         display: flex;
@@ -192,12 +198,17 @@ h1 {
         background-color: black;
         position: fixed;
         width: 100%;
+        color:seashell;
+      }
+      .show-nav ul li {
+        list-style-type: none;
       }
       .show-nav-links {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        height: 40vh;
       }
 
       #nav {

@@ -4,7 +4,11 @@ import veloScreenshot from './velo-screenshot.png';
 import teaScreenshot from './tea-screenshot.png'; 
 import designScreenshot from './design-screenshot.png';
 
-export const Projects =()=>{
+export const Projects =(props)=>{
+    if(!props.projects) {
+        return null
+    }
+    if(props.projects) {
     return(
         <div className="grid">
         <main className="main-content">
@@ -42,4 +46,5 @@ export const Projects =()=>{
         </main>
         </div>
     )
+    }
 }

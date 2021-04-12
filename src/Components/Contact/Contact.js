@@ -2,7 +2,12 @@ import React from 'react';
 import githubImage from './github-logo.jpg';
 import emailImage from './email-logo.png';
 
-export const Contact =()=> {
+export const Contact =(props)=> {
+    if(!props.contact) {
+        return null
+    }
+   
+    if(props.contact) {
     return(
     
     <div className="grid">
@@ -34,4 +39,5 @@ export const Contact =()=> {
     </div> 
 
     )
+    }
 }

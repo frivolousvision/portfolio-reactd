@@ -1,7 +1,11 @@
 import React from 'react';
 
-export const About =()=>{
-   return (
+export const About =(props)=>{
+    if(!props.about) {
+        return null
+    }
+    if(props.about) {
+    return (
     <div className="grid">
    <main className="main-content">
             <div className="about" id ="about">
@@ -21,4 +25,5 @@ export const About =()=>{
             </main>
             </div>
    )
+    }
 }
